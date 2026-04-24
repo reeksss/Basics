@@ -1,0 +1,24 @@
+void main() {
+    //if - else
+    int a = 6; // Либо через Scanner
+    if(a > 10) {
+        System.out.println("Больше 10");
+    } else {
+        System.out.println("Меньше 10");
+    }
+    // ЕСЛИ а>10, вывести Больше 10, ИНАЧЕ, вывести Меньше 10
+    //Вывод: Меньше 10
+
+
+    //switch
+    int b = 5; // Либо через Scanner
+    switch (b) {
+        case 2 -> System.out.println("Два");
+        case 3 -> {
+            System.out.println("Три");
+            System.out.println("Three");
+        }
+        case 5 -> System.out.println("Пять");
+    }
+    // Если b = 2, вывести Два, если b = 5, вывести Пять
+}
