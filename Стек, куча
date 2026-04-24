@@ -9,7 +9,7 @@ void main() {
 
     int b;
     b = a; // b - значение а
-    b = 5; // Меняем b, а не значение ф
+    b = 5; // Меняем b, а не значение а
     System.out.println(b); // 5
 
     int[] arr1;
