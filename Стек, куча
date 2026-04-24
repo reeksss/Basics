@@ -1,0 +1,25 @@
+void main() {
+    int a = 10;// а - это 10, лежит в стеке
+    changePrimitive(a);
+    System.out.println(a); // 10
+
+    int[] arr = {1,2,3};   // arr - ссылка на обьекст [1,2,3] в куче(heap)
+    changeObject(arr);
+    System.out.println(Arrays.toString(arr)); // [1,5,3]
+
+    int b;
+    b = a; // b - значение а
+    b = 5; // Меняем b, а не значение ф
+    System.out.println(b); // 5
+
+    int[] arr1;
+    arr1 = arr;     // arr1 - ссылка на arr - ссылка на массив [1,5,3]
+    arr1[1] = 7;    // Обращаемся к arr - ссылке на массив [1,5,3], меняем число в самом массиве
+    System.out.println(Arrays.toString(arr));// [1,7,3]
+}
+static void changePrimitive(int a) {
+    a = 5; // Обращаемся к копии, тк. это уже другое а
+}
+static void changeObject(int[] arr) {
+    arr[1] = 5; // Обращаемся к этому же обьекту в куче
+}
