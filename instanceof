@@ -29,7 +29,7 @@ void main() {
 
     Integer a = 1;
     System.out.println(a instanceof Integer);// true
-    //System.out.println(a instanceof String); // Ошибка компиляции! java заранее понимает что a никак не может быть String
+    System.out.println(a instanceof String); // Ошибка компиляции! java заранее понимает что a никак не может быть String
 
 
     Cat cat = new MaineCoon();
