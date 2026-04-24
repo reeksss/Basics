@@ -3,7 +3,7 @@ void main() {
     changePrimitive(a);
     System.out.println(a); // 10
 
-    int[] arr = {1,2,3};   // arr - ссылка на обьекст [1,2,3] в куче(heap)
+    int[] arr = {1,2,3};   // arr - ссылка на обьект [1,2,3] в куче(heap)
     changeObject(arr);
     System.out.println(Arrays.toString(arr)); // [1,5,3]
 
