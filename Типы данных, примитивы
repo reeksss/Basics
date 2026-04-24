@@ -23,12 +23,19 @@ void main() {
 
     // Ссылочные обьекты, не имеют числовых литералов(Integer может использовать int литерал(не свой)),
 
+    //String
     String i = "Hello";   // Неизменяем
     i.toLowerCase();      // Игнорируется(возвращается строка, можно присвоить)
     i = i.toLowerCase();  // Правильно
 
     StringBuilder sb = new StringBuilder("Hello");  // Для изменяемости - StringBuilder
     sb.append("5");   // sb = Hello5
+
+    String s1 = "hello";
+    String s2 = "hello";
+    // s1, s2 - ссылаются на 1 и тот же обьект
+    // при создании строки. она попадает в пул строк
+    System.out.println(s1 == s2); // true
 
 
     Integer j = 128;   // Есть методы через .
