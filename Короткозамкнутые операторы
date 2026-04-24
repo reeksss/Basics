@@ -1,0 +1,33 @@
+import java.util.Scanner;
+void main() {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Введи число ");
+    int a = scanner.nextInt();
+
+    if(a > 10 && ++a > 5) {
+        System.out.println(a);
+    }
+    System.out.println(a);
+    // Ввод: 6, 6 > 10 = false, дальше условие не идет тк. уже ложно, выводится 6
+
+    // Короткозамкнутый оператор &
+    if(a > 10 & ++a > 5) {
+        System.out.println(a);
+    }
+    System.out.println(+a);
+    // Ввод: 6, 6 > 10 = false, НО условие идет дальше, ++а выполняется, на выходе a = 7, выводится
+
+
+
+    if(a < 10 || ++a > 12) {
+        System.out.println(a);
+    }
+    System.out.println(a);
+    // Ввод: 6 , 6 < 10 = true, условие уже истино, независимо от ++a > 5, ++а не выполняется, выводится 6, 6
+
+    if(a < 10 | ++a > 12) {
+        System.out.println(a);
+    }
+    System.out.println(a);
+    // Ввод: 6, 6 < 10 = true, но условие идет дальше, ++а выполняется, вывод 7, 7
+}
