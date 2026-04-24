@@ -1,0 +1,72 @@
+public class Animal {
+
+}
+public class Cat extends Animal{
+    public void Meow() {
+        System.out.println("Meeeoooow");
+    }
+}
+public class MaineCoon extends Cat {
+
+}
+
+public interface Raw {
+     default void Raww (){
+        System.out.println("Raw");
+    }
+}
+
+public class Dog implements Raw {
+
+}
+
+
+
+void main() {
+    // Проверяет, был ли объект, на которую ссылается переменная х, создан на основе класса у
+    // 'Обьект' instanceof 'Класс'
+    Integer a = 1;
+    System.out.println(a instanceof Integer);// true
+    //System.out.println(a instanceof String); // Ошибка компиляции! java заранее понимает что a никак не может быть String
+    Cat cat = new MaineCoon();
+    System.out.println(cat instanceof Animal); // true - MaineCoon - наследник Animal
+    System.out.println(cat instanceof Cat); // true - MaineCoon - наследник Cat
+
+    Cat cat2 = new Cat();
+    System.out.println(cat2 instanceof MaineCoon); // false - Cat - предок MaineCoon
+
+
+    // Так же с интерфейсами
+    Dog dog = new Dog();
+    System.out.println(dog instanceof Raw); // true - Dog реализует интерфейс Raw
+
+
+    //null
+    Integer i = null;
+    System.out.println(i instanceof Integer); // false, с null instanceof всегда false
+
+
+
+}
+// Pattern matching(java 16+)
+
+//Старый способ
+public void oldMeow(Animal animal) {
+    if(animal instanceof Cat) {
+        Cat cat = (Cat) animal; // Явное приведение к Cat
+        cat.Meow();
+    }
+}
+
+public void newMeow(Animal animal) {
+    if(animal instanceof Cat cat) { // Сразу создаем переменную Cat - cat, если null - переменная не будет создана
+        cat.Meow();
+    }
+}
+
+// switch
+public void swMeow(Animal animal) {
+    switch (animal) {
+        case Cat cat -> cat.Meow(); // Сразу переменная типа Cat
+    }
+}
