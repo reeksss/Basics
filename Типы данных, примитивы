@@ -34,7 +34,8 @@ void main() {
 
     System.out.println(j == c);         // true, если 1 из обьектов в '==' - примитив, то сравнивается не с k, а с k.intValue()
 
-    // Массивы, при создании массива массивов заполняется 0 (у зубчатого - null), выводятся через Arrays.deepToString(matrix), одномерный через Arrays.toString()
+    // Массивы, при создании массива массивов заполняется 0 (у зубчатого - null), 
+    // Выводятся через Arrays.deepToString(matrix), одномерный через Arrays.toString(), индексы с 0
 
     int[] arr = {1,2,3};               // Одномерный массив
     System.out.println(arr);           // [I@1f32e575 (мусор)
