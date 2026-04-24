@@ -13,6 +13,14 @@ void main() {
     var v2 = 5.0;         // double!
     final int o = 5;      // константа, нельзя поменять
 
+
+    // enum
+    enum Type {             // тип Type, принимает значения либо COMMON, либо EPIC, ничего другого.
+        COMMON, EPIC
+    }
+    Type e1 = Type.COMMON;  // Присваивание Type(enum)
+
+
     // Ссылочные обьекты, не имеют числовых литералов(Integer может использовать int литерал(не свой)),
 
     String i = "Hello";   // Неизменяем
