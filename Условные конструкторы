@@ -10,7 +10,7 @@ void main() {
     //Вывод: Меньше 10
 
 
-    //switch
+    //switch НЕЛЬЗЯ double
     int b = 5; // Либо через Scanner
     switch (b) {
         case 2 -> System.out.println("Два");
